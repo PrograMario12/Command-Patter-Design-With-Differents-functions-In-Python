@@ -19,3 +19,10 @@ class PasteCommand(Command):
 
     def execute(self):
         self.receiver.paste()
+
+class SortNamesCommand(Command):
+    def __init__(self, receiver):
+        self.receiver = receiver
+
+    def execute(self):
+        self.receiver.sort_names_by_vowels()
